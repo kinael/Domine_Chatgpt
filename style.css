@@ -1,37 +1,54 @@
-/* Custom Styles */
+/* Base */
+:root {
+  --bg-950: #020617; /* slate-950 */
+  --bg-900: #0f172a; /* slate-900 */
+  --bg-800: #1e293b; /* slate-800 */
+  --txt-100: #f1f5f9; /* slate-100 */
+  --txt-300: #cbd5e1; /* slate-300 */
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --border: #1f2937; /* slate-800-ish */
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Utility helpers for dark mode emphasis (opcional) */
+.btn-primary {
+  box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.35);
+}
+.btn-primary:hover {
+  box-shadow: 0 12px 36px -12px rgba(245, 158, 11, 0.45);
 }
 
 /* Animation Classes */
 .fade-in {
-    animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
-
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* FAQ Toggle Animation */
 .faq-content.show {
-    display: block;
-    animation: fadeIn 0.3s ease-in-out;
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Custom shadows */
+/* Shadows */
 .shadow-soft {
-    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.25);
 }
-
 .shadow-hard {
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.35);
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
+  .hero-title {
+    font-size: 2.5rem;
+  }
 }
